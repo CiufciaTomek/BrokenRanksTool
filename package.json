@@ -1,0 +1,61 @@
+{
+  "name": "brokenranks-tool",
+  "main": "main.js",
+  "version": "0.1.0",
+  "author": "CiufciaTomek",
+  "private": true,
+  "dependencies": {
+    "cap": "^0.2.1",
+    "react-markdown": "^8.0.0",
+    "utf8": "^3.0.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "watch": "webpack --config webpack.common.js --watch",
+    "build-deploy": "npx electron-packager . --overwrite"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.2",
+    "@types/react-redux": "^7.1.22",
+    "convert-seconds": "^1.0.1",
+    "copy-to-clipboard": "^3.3.1",
+    "css-loader": "^6.5.1",
+    "electron": "^17.0.0",
+    "electron-packager": "^15.4.0",
+    "electron-rebuild": "^3.2.7",
+    "i18next": "^21.6.12",
+    "node-loader": "^2.0.0",
+    "numeral": "^2.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.5.3",
+    "react-i18next": "^11.15.5",
+    "react-redux": "^7.2.6",
+    "react-scripts": "5.0.0",
+    "react-toastify": "^8.2.0",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "style-loader": "^3.3.1",
+    "styled-components": "^5.3.3",
+    "use-timer": "^2.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "content_security_policy": "default-src 'self' style-src 'self' 'unsafe-inline';",
+  "engines": {
+    "node": "16.14.0"
+  }
+}

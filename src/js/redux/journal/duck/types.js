@@ -1,0 +1,9 @@
+const UPDATE_JOURNAL = 'UPDATE_JOURNAL'
+const UPDATE_TOTAL = 'UPDATE_TOTAL'
+const LOAD_TOTAL = 'LOAD_TOTAL'
+
+export default {
+    UPDATE_JOURNAL,
+    UPDATE_TOTAL,
+    LOAD_TOTAL
+}

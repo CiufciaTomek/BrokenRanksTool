@@ -1,0 +1,19 @@
+* {
+    font-family: monospace;
+}
+
+html {
+    height: 100%;
+    background-color: #333333;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
