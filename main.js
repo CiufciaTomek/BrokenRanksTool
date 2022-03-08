@@ -19,7 +19,7 @@ const createWindow = () => {
   })
 
   //Development mode only
-  win.webContents.openDevTools()
+ // win.webContents.openDevTools()
 
   win.loadFile('./src/index.html')
 }

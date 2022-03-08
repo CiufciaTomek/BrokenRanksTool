@@ -8,13 +8,8 @@ import { default as userActions } from "../../redux/user/duck/actions";
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useTranslation } from 'react-i18next';
-//const CHANGELOG_FILE = require('./../../../../CHANGELOG.md')
-import ReactMarkdown from 'react-markdown';
-
-import changelogFile from './../../../../CHANGELOG.md'
 
 const Settings = ({ toggleModal, modal, user, network, language, loadLanguage, shortkeys, addShortKey, loadShortkeys }) => {
-    
 
     const { t, i18n } = useTranslation();
 
@@ -29,7 +24,6 @@ const Settings = ({ toggleModal, modal, user, network, language, loadLanguage, s
     const [keyInput, setKeyInput] = useState({ key: null, code: null })
     const [validFalse, setValidFalse] = useState({ text: null, display: false })
     const [isLanguageChanging, setIsLanguageChanging] = useState(false)
-    const [changelog, setChangelog] = useState('')
 
     useEffect(() => {
         setLanguage(language)
@@ -83,23 +77,6 @@ const Settings = ({ toggleModal, modal, user, network, language, loadLanguage, s
         setIsLanguageChanging(!isLanguageChanging)
     }, [selectLanguage])
 
-
-    useEffect(() => {
-        fetch(changelogFile)
-        .then((r) => {
-            console.log(r)
-        })
-        .catch((e) => {
-            console.log(e)
-        })
-        //const importChangelog = await fetch(CHANGELOG_FILE)
-    },[])
-    // useEffect(() => {
-    //     console.log(shortkeys)
-    //     if(!shortkeys.length) return
-    //     window.localStorage.setItem('shortkeys', JSON.stringify(shortkeys))
-    // }, [shortkeys])
-
     return (
         <ChatModal display={modal} ref={ref}>
             <ModalContent>
@@ -111,7 +88,7 @@ const Settings = ({ toggleModal, modal, user, network, language, loadLanguage, s
                     <MenuElement onClick={() => setChannel('about')} active={channel == 'about' ? true : false}>{t('about')}</MenuElement>
                     <MenuElement onClick={() => setChannel('changelog')} active={channel == 'changelog' ? true : false}>{t('changelog')}</MenuElement>
                     <MenuFooter lang={i18n.language}>
-                        {t('Version')}: {'1.0.0'}
+                        {t('Version')}: 0.1.0
                     </MenuFooter>
                 </ModalMenu>
 
@@ -173,11 +150,11 @@ const Settings = ({ toggleModal, modal, user, network, language, loadLanguage, s
                 </Page>
 
                 <Page active={channel == 'about' ? true : false}>
-                    Version: {'1.0.0'}
+                    Version: 0.1.0
                 </Page>
 
                 <Page active={channel == 'changelog' ? true : false}>
-                        <ReactMarkdown children={changelog} />
+                        
                 </Page>
 
                 <AddShortkeyDialog show={listenKeys} ref={shortkeyDialogRef}>
@@ -287,7 +264,7 @@ ${props => props.active ? 'font-weight:700' : ''};
 
 const MenuFooter = styled.div`
 width: 95%;
-height: ${props => props.lang == 'Polski' ? '65%' : '68%'};
+height: ${props => props.lang == 'Polski' ? '57%' : '60%'};
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;

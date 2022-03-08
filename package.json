@@ -6,7 +6,6 @@
   "private": true,
   "dependencies": {
     "cap": "^0.2.1",
-    "react-markdown": "^8.0.0",
     "utf8": "^3.0.0"
   },
   "scripts": {
