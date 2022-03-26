@@ -6,9 +6,11 @@
 # production
 /build
 /brokenranks-tool-win32-x64
+*.7z
 
 # misc
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
